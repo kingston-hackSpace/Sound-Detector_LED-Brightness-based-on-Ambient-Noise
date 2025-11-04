@@ -17,7 +17,7 @@ WARNING!
 The 3V 1W LED is much brighter than a typical LED, so we need to handle it carefully: you can’t drive it directly from an Arduino pin, because the Arduino’s pins can only source ~40 mA max, and 1W at 3V draws ~333 mA. The use of a MOSFET is required (explained below).
 
 MOSFET Pins: see reference image
-
+https://github.com/kingston-hackSpace/Sound-Detector_LED-Brightness-based-on-Ambient-Noise/blob/main/TIP120-NPN-Darlington-Transistor-Pin-Configuration.jpg
 
 WIRING
 -
