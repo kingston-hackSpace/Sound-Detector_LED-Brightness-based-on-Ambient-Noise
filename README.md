@@ -93,4 +93,6 @@ Using map() and analogWrite(), the LED brightness scales with sound level.
 
 The smoothing factor makes the LED respond gradually instead of flickering with every tiny noise spike.
 
+MAP() FUNCTION
+-
 More about the map() function: https://docs.arduino.cc/language-reference/en/functions/math/map/
