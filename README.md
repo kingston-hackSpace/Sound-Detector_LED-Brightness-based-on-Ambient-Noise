@@ -61,5 +61,16 @@ void loop() {
 
   delay(10); // small delay for smoother visual response
 }
-
 ```
+
+HOW IT WORKS
+-
+The Envelope output gives a voltage proportional to the sound amplitude.
+
+The Arduino reads this analog voltage continuously.
+
+Using map() and analogWrite(), the LED brightness scales with sound level.
+
+The smoothing factor makes the LED respond gradually instead of flickering with every tiny noise spike.
+
+More about the map() function: https://docs.arduino.cc/language-reference/en/functions/math/map/
