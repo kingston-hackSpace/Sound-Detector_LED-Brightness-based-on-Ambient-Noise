@@ -24,9 +24,9 @@ WIRING
 
 | MOSFET Pin | Connect to                              |
 | ---------- | --------------------------------------- |
-| **Gate (Base)**   | Arduino PWM pin → 220 Ω resistor → Gate |
-| **Drain (Collector)**  | LED negative (–)                        |
-| **Source (Emitter)** | Power supply GND (also Arduino GND)     |
+| **Gate**   | Arduino PWM pin → 220 Ω resistor → Gate |
+| **Drain**  | LED negative (–)                        |
+| **Source** | Power supply GND (also Arduino GND)     |
 
 
 
