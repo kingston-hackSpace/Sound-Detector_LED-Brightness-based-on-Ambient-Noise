@@ -7,9 +7,13 @@ EQUIPMENT
 - Arduino board (Uno, Nano, Mega, etc.)
 - SparkFun Sound Detector (https://www.sparkfun.com/sparkfun-sound-detector-with-headers.html)
 - 3V 1W LED (https://www.adafruit.com/product/518) 
-- 220 Ω resistor (for single LED)
+- 220 Ω resistor
+- N‑channel MOSFET (e.g., IRL540, logic-level) or NPN transistor (e.g., TIP120)
 - Breadboard & jumper wires
 
+WARNING!
+-
+The 3V 1W LED is much brighter than a typical LED, so we need to handle it carefully: you can’t drive it directly from an Arduino pin, because the Arduino’s pins can only source ~40 mA max, and 1W at 3V draws ~333 mA. The use of a MOSFET is required (explained below).
 
 WIRING
 -
