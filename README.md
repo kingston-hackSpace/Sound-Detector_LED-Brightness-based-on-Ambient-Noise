@@ -29,21 +29,17 @@ WIRING
 | **Source** | Power supply GND (also Arduino GND)     |
 
 
-*LED:*
 
-  LED positive (+) → Power supply positive (+)
+LED positive (+) → Power supply positive (+)
 
+Sound Detector Envelope output → Arduino A0
 
-*Sound Detector:*
+Sound Detector VCC → Arduino 5 V
 
-Envelope output → Arduino A0
-
-VCC → Arduino 5 V
-
-GND → Arduino GND
+Sound Detector GND → Arduino GND
 
 
-*Notes:*
+***Notes:***
 
 Common ground is essential: Arduino GND, MOSFET source, and LED power supply GND must all be connected.
 
