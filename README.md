@@ -6,7 +6,7 @@ EQUIPMENT
 -
 - Arduino board (Uno, Nano, Mega, etc.)
 - SparkFun Sound Detector
-- LED 
+- 3V 1W LED (https://www.adafruit.com/product/518) 
 - 220 Ω resistor (for single LED)
 - Breadboard & jumper wires
 
