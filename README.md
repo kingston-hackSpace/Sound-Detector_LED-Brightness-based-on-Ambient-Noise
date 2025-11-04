@@ -5,7 +5,7 @@ Control the brightness of an LED based on ambient sound levels.
 EQUIPMENT
 -
 - Arduino board (Uno, Nano, Mega, etc.)
-- SparkFun Sound Detector
+- SparkFun Sound Detector (https://www.sparkfun.com/sparkfun-sound-detector-with-headers.html)
 - 3V 1W LED (https://www.adafruit.com/product/518) 
 - 220 Ω resistor (for single LED)
 - Breadboard & jumper wires
