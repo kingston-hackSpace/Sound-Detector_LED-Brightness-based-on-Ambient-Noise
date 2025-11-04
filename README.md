@@ -15,6 +15,7 @@ WIRING
 -
 
 SparkFun Sound Detector → Arduino
+
 GND → GND
 VCC → 5V
 Envelope (OUT) → A0
