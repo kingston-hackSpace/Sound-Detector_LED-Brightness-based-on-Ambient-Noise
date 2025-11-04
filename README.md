@@ -17,10 +17,15 @@ WIRING
 SparkFun Sound Detector → Arduino
 
 GND → GND
+
 VCC → 5V
+
 Envelope (OUT) → A0
+
 LED → Arduino
+
 Anode → PWM pin (e.g., D9) via 220 Ω resistor
+
 Cathode → GND
 
 ARDUINO CODE
