@@ -10,27 +10,44 @@ EQUIPMENT
 - 220 Ω resistor
 - N‑channel MOSFET (e.g., IRL540, logic-level) or NPN transistor (e.g., TIP120)
 - Breadboard & jumper wires
+- Power Supply for LED (3V, ≥500 mA)
 
 WARNING!
 -
 The 3V 1W LED is much brighter than a typical LED, so we need to handle it carefully: you can’t drive it directly from an Arduino pin, because the Arduino’s pins can only source ~40 mA max, and 1W at 3V draws ~333 mA. The use of a MOSFET is required (explained below).
 
+MOSFET Pins: see reference image
+
+
 WIRING
 -
 
-SparkFun Sound Detector → Arduino
+| MOSFET Pin | Connect to                              |
+| ---------- | --------------------------------------- |
+| **Gate**   | Arduino PWM pin → 220 Ω resistor → Gate |
+| **Drain**  | LED negative (–)                        |
+| **Source** | Power supply GND (also Arduino GND)     |
 
-GND → GND
+LED:
 
-VCC → 5V
+LED positive (+) → Power supply positive (+)
 
-Envelope (OUT) → A0
+Sound Detector:
 
-LED → Arduino
+Envelope output → Arduino A0
 
-Anode → PWM pin (e.g., D9) via 220 Ω resistor
+VCC → Arduino 5 V
 
-Cathode → GND
+GND → Arduino GND
+
+Notes:
+
+Common ground is essential: Arduino GND, MOSFET source, and LED power supply GND must all be connected.
+
+Gate resistor (220 Ω) protects the Arduino and prevents oscillations.
+
+The MOSFET allows the Arduino to safely modulate PWM to dim the 1 W LED.
+
 
 ARDUINO CODE
 -
