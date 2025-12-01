@@ -7,7 +7,7 @@ HARDWARE
 - Arduino board (Uno, Nano, Mega, etc.)
 - SparkFun Sound Detector ([reference](https://www.sparkfun.com/sparkfun-sound-detector-with-headers.html))
 - 3V 1W LED ([reference](https://www.adafruit.com/product/518))
-- 220 Ω resistor
+- 2.2KΩ resistor
 - N‑channel MOSFET (e.g., IRL540, logic-level) or NPN transistor (e.g., TIP120)
 - Breadboard & jumper wires
 - Power Supply for LED (3V, ≥500 mA)
@@ -30,7 +30,7 @@ WIRING
 
 | TIP 120 Pin      | Connect to                              |
 | --------------- | --------------------------------------- |
-| **Base**        | Arduino PWM pin → 220 Ω resistor → base |
+| **Base**        | Arduino PWM pin → 2.2KΩ resistor → base |
 | **Collector**   | LED negative (–)                        |
 | **Emitter**     | Power supply GND (also Arduino GND)     |
 
@@ -47,7 +47,7 @@ WIRING
 
 Common ground is essential: Arduino GND, TIP120 emitter, and LED power supply GND must all be connected.
 
-Base resistor (220 Ω) protects the Arduino and prevents oscillations.
+Base resistor (2.2KΩ) protects the Arduino and prevents oscillations.
 
 The TIP120 allows the Arduino to safely modulate PWM to dim the 1W LED.
 
