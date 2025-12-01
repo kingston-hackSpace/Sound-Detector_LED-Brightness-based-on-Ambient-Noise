@@ -8,7 +8,7 @@ HARDWARE
 - SparkFun Sound Detector ([reference](https://www.sparkfun.com/sparkfun-sound-detector-with-headers.html))
 - 3V 1W LED ([reference](https://www.adafruit.com/product/518))
 - 2.2KΩ resistor
-- N‑channel MOSFET (e.g., IRL540, logic-level) or NPN transistor (e.g., TIP120)
+- NPN transistor (TIP120)
 - Breadboard & jumper wires
 - Power Supply for LED (3V, ≥500 mA)
 
@@ -24,20 +24,20 @@ WIRING
 | LED             | Connect to                              |
 | --------------- | --------------------------------------- |
 | **Positive lead (+)** | Power supply positive (+) |
-| **Negative lead (-)** | Power supply negative (-) & GND Arduino|
+| **Negative lead (-)** | TIP120 Collector|
 
 
 
 | TIP 120 Pin      | Connect to                              |
 | --------------- | --------------------------------------- |
-| **Base**        | Arduino PWM pin → 2.2KΩ resistor → base |
+| **Base**        | Arduino PWM pin → 2.2KΩ resistor → TIP Base |
 | **Collector**   | LED negative (–)                        |
 | **Emitter**     | Power supply GND (also Arduino GND)     |
 
 
 | Sound Detector  | Connect to                              |
 | --------------- | --------------------------------------- |
-| **Envelop**     | Arduino A0                              |
+| **Envelope**    | Arduino A0                              |
 | **VCC**         | Arduino 5V                              |
 | **GND**         | Arduino GND                             |
 
