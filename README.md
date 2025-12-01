@@ -22,21 +22,26 @@ https://github.com/kingston-hackSpace/Sound-Detector_LED-Brightness-based-on-Amb
 WIRING
 -
 
+| LED             | Connect to                              |
+| --------------- | --------------------------------------- |
+| **Positive lead (+)** | Power supply positive (+) |
+| **Negative lead (-)** | Power supply positive (-) & GND Arduino|
+
+
+
 | MOSFET Pin      | Connect to                              |
 | --------------- | --------------------------------------- |
-| **Collector**   | Arduino PWM pin → 220 Ω resistor → Gate |
-| **Drain**       | LED negative (–)                        |
+| **Base**        | Arduino PWM pin → 220 Ω resistor → Gate |
+| **Collector**   | LED negative (–)                        |
 | **Emitter**     | Power supply GND (also Arduino GND)     |
 
 
+| Sound Detector  | Connect to                              |
+| --------------- | --------------------------------------- |
+| **Envelop**     | Arduino A0                              |
+| **VCC**         | Arduino 5V                              |
+| **GND**         | Arduino GND                             |
 
-LED positive (+) → Power supply positive (+)
-
-Sound Detector Envelope output → Arduino A0
-
-Sound Detector VCC → Arduino 5 V
-
-Sound Detector GND → Arduino GND
 
 
 ***Notes:***
