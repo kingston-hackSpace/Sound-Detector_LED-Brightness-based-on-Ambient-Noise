@@ -1,9 +1,11 @@
 # Sound-Detector_LED-Brightness-based-on-Ambient-Noise
 Control the brightness of an LED based on ambient sound levels.
 
+### SETTING UP BEFORE STARTING
+If this is your first time using the Sound Detector, please follow [this tutorial](https://github.com/kingston-hackSpace/Sound-Detector).
 
-HARDWARE
--
+
+### HARDWARE
 - Arduino board (Uno, Nano, Mega, etc.)
 - SparkFun Sound Detector ([reference](https://www.sparkfun.com/sparkfun-sound-detector-with-headers.html))
 - 3V 1W LED ([reference](https://www.adafruit.com/product/518))
@@ -13,13 +15,11 @@ HARDWARE
 - Power Supply for LED (3V, ≥500 mA)
 
 WARNING!
--
 The 3V 1W LED is much brighter than a typical LED, so we need to handle it carefully: you can’t drive it directly from an Arduino pin, because the Arduino’s pins can only source ~20 mA max, and 1W at 3V draws ~333 mA. The use of a transistor is required (explained below).
 
 TIP120 Pins: see reference image [here](https://github.com/kingston-hackSpace/Sound-Detector_LED-Brightness-based-on-Ambient-Noise/blob/main/TIP120-NPN-Darlington-Transistor-Pin-Configuration.jpg)
 
-WIRING
--
+### WIRING
 
 | LED             | Connect to                              |
 | --------------- | --------------------------------------- |
@@ -52,8 +52,7 @@ Base resistor (2.2KΩ) protects the Arduino and prevents oscillations.
 The TIP120 allows the Arduino to safely modulate PWM to dim the 1W LED.
 
 
-ARDUINO CODE
--
+### ARDUINO CODE
 ```
 // Pin definitions
 const int soundPin = A0;  // Envelope output
@@ -87,8 +86,8 @@ void loop() {
 }
 ```
 
-HOW IT WORKS
--
+### HOW IT WORKS
+
 The Envelope output gives a voltage proportional to the sound amplitude.
 
 The Arduino reads this analog voltage continuously.
@@ -97,6 +96,5 @@ Using map() and analogWrite(), the LED brightness scales with sound level.
 
 The smoothing factor makes the LED respond gradually instead of flickering with every tiny noise spike.
 
-MAP() FUNCTION
--
+### MAP() FUNCTION
 More about the map() function: https://docs.arduino.cc/language-reference/en/functions/math/map/
